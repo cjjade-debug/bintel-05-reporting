@@ -97,7 +97,7 @@ open a machine terminal in your `Repos` folder:
 
 ```shell
 # Replace username with YOUR GitHub username.
-git clone https://github.com/username/bintel-05-reporting
+git clone https://github.com/cjjade-debug/bintel-05-reporting
 
 cd bintel-05-reporting
 code .

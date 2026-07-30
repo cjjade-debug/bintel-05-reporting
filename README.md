@@ -226,6 +226,10 @@ Save your images to docs/images/ and update the links below.
 
 ![Power BI or Spark OLAP Analysis](./docs/images/Figure_2.png)
 
+![Quarterly Sales Rollup](./docs/images/Figure_3.png)
+
+![2025 Monthly Sales Drill-Down](./docs/images/Figure_4.png)
+
 ## Project Documentation
 
 Additional project instructions, terms, and notes:

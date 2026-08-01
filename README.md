@@ -103,11 +103,6 @@ cd bintel-05-reporting
 code .
 ```
 
-## Custom Command
-
-- Image Figures 3, 4, & 5
-- SLice Report Chart of West
-
 ### In a VS Code terminal
 
 These are listed for convenience.
@@ -165,6 +160,11 @@ git push -u origin main
 ```
 
 </details>
+
+## Custom Command
+
+- Image Figures 3, 4, & 5
+- SLice Report Chart of West
 
 ## Notes
 

@@ -45,16 +45,16 @@ OBS:
 
 # === DECLARE IMPORTS (bring in free code from elsewhere) ===
 
-from pathlib import Path
+from pathlib import Path  # noqa: I001
 from typing import Final
 
-from datafun_toolkit.logger import log_path
-import matplotlib.pyplot as plt
-import pandas as pd
-from pyspark.sql import DataFrame, SparkSession
-from pyspark.sql import functions as F
+from datafun_toolkit.logger import log_path  # type: ignore
+import matplotlib.pyplot as plt  # type: ignore
+import pandas as pd  # type: ignore
+from pyspark.sql import DataFrame, SparkSession  # type: ignore
+from pyspark.sql import functions as F  # type: ignore
 
-from bizintel.utils_logger import LOG, log_header
+from bizintel.utils_logger import LOG, log_header  # type: ignore
 from bizintel.utils_viz import plot_bar, plot_line
 
 # === DECLARE GLOBAL CONSTANTS AND CONFIGURATION ===
@@ -362,7 +362,7 @@ def summarize(
         df_yearly.loc[
             df_yearly["TotalSales"].idxmax(),
             "SalesYear",
-        ]
+        ]  # type: ignore
     )
 
     best_year_sales: float = float(df_yearly["TotalSales"].max())

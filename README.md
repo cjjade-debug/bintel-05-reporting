@@ -102,7 +102,9 @@ git clone https://github.com/cjjade-debug/bintel-05-reporting
 cd bintel-05-reporting
 code .
 ```
+
 ## Custom Command
+
 - Image Figures 3, 4, & 5
 - SLice Report Chart of West
 

@@ -19,13 +19,13 @@ OBS:
 
 # === DECLARE IMPORTS (bring in free code from elsewhere) ===
 
-from pathlib import Path
+from pathlib import Path  # noqa: I001
 from typing import Final
 
-from datafun_toolkit.logger import log_path
+from datafun_toolkit.logger import log_path  # type: ignore
 
 from bizintel.olap_case import main as run_olap_reporting
-from bizintel.utils_logger import LOG, log_header
+from bizintel.utils_logger import LOG, log_header  # type: ignore
 
 # === DECLARE GLOBAL CONSTANTS AND CONFIGURATION ===
 

@@ -40,15 +40,15 @@ OBS:
 
 # === IMPORTS ===
 
-from pathlib import Path
+from pathlib import Path  # noqa: I001
 from typing import Final
 
-from datafun_toolkit.logger import log_path
-import duckdb
-import matplotlib.pyplot as plt
-import pandas as pd
+from datafun_toolkit.logger import log_path  # type: ignore
+import duckdb  # type: ignore
+import matplotlib.pyplot as plt  # type: ignore
+import pandas as pd  # type: ignore
 
-from bizintel.utils_logger import LOG, log_header
+from bizintel.utils_logger import LOG, log_header  # type: ignore
 from bizintel.utils_viz import plot_bar, plot_line
 
 # === DECLARE CONSTANTS ===
@@ -624,7 +624,7 @@ def summarize(
 
     best_month_index = df_months["TotalSales"].idxmax()
     best_month: str = str(df_months.loc[best_month_index, "PeriodLabel"])
-    best_month_sales: float = float(df_months.loc[best_month_index, "TotalSales"])
+    best_month_sales: float = float(df_months.loc[best_month_index, "TotalSales"])  # type: ignore
 
     LOG.info(
         f"Drill-down: The strongest month in {selected_year} is "
@@ -732,7 +732,7 @@ def main() -> None:
 
         LOG.info("CALL a function to plot quarterly roll-up results........")
         plot_line(
-            df=df_quarterly,
+            df=df_quarterly,  # type: ignore
             x="YearQuarter",
             y="TotalSales",
             title="Quarterly Sales Roll-Up",
@@ -754,7 +754,7 @@ def main() -> None:
 
         LOG.info("CALL a function to plot monthly drill-down results........")
         plot_line(
-            df=df_monthly,
+            df=df_monthly,  # type: ignore
             x="PeriodLabel",
             y="TotalSales",
             title=f"Monthly Sales Drill-Down for {selected_year}",

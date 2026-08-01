@@ -102,6 +102,9 @@ git clone https://github.com/cjjade-debug/bintel-05-reporting
 cd bintel-05-reporting
 code .
 ```
+## Custom Command
+- Image Figures 3, 4, & 5
+- SLice Report Chart of West
 
 ### In a VS Code terminal
 
@@ -223,6 +226,8 @@ Run the example to generate the correct ones.
 Save your images to docs/images/ and update the links below.
 
 ![DuckDB OLAP Reporting Results](./docs/images/Figure_1.png)
+
+![DuckDB OLAP Reporting Results](./docs/images/Figure_5.png)
 
 ![Power BI or Spark OLAP Analysis](./docs/images/Figure_2.png)
 

@@ -66,10 +66,15 @@ Place it there because it did take me couple hours of reading, videos, and a fai
 - For the Rollup I started in PowerBI but ended up moving to Spark to look.
 - I first looked at quarterly sales, then moved to Spark and generated a report and chart of 2024 and 2025 sales.
 
+![Spark Rollup](./images/Figure_3.png)
+![Spark Rollup](./images/Figure_7.png)
+
 ## Drilldown
 
 - For the Drilldown in PowerBI I ran a report the SalesYear for 2025.
 - Within my charts it revealed the top 5 and bottom 5 sales for 2025
+
+![Spark Drilldown](./images/Figure_7.png)
 
 ### Findings
 

@@ -26,7 +26,7 @@ The small technical modification I choose to make was creating a second chart th
 I choose this modification, because I decided to use this project to center around the sales of the East and West for my custom project.
 Having this modification helped give a bigger picture of both the sales for East region and West region.
 
-This was veirfied both when the new chart generated, and I saw Exected Successfully on the project.log.
+This was verified both when the new chart generated, and I saw Expected Successfully on the project.log.
 
 This change was somewhere in between easy and moderate.
 Place it there because it did take me couple hours of reading, videos, and a failed attempt before I figured out I was making it harder then it needed to be.
@@ -39,7 +39,7 @@ Place it there because it did take me couple hours of reading, videos, and a fai
 ### Data Basics
 
 - The data I choose to investigate was the Sales of the East and West.
-- I invesigated monthly and annually sales, as well as the top and bottom 5.
+- I investigated monthly and annually sales, as well as the top and bottom 5.
 
 ## Data Question
 
@@ -89,5 +89,10 @@ Place it there because it did take me couple hours of reading, videos, and a fai
 
 ### Final Thoughts
 
-- This project was one of the more facinating, using Spark and PowerBI together gave a better inisght to real-world applications
+- This project was one of the more fascinating, using Spark and PowerBI together gave a better insight to real-world applications
 - Working in auding and compliance I can utilizing using these new skills within finding errors and implementing solutions.
+
+### Images Proof
+
+![Proof](./images/P5_Phase5.1A.jpg)
+![Proof](./images/P5_Phase5.1B.jpg)

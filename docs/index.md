@@ -81,23 +81,13 @@ Place it there because it did take me couple hours of reading, videos, and a fai
 
 ### Findings
 
-Describe what your OLAP analysis revealed.
+- Within my Findings I found that the East out sells the West in every category, by a large number.
+- It is also shown that the West is well below the average sales as well.
 
-Include:
+- This is important, because while you can expect there to be a difference the difference is quite large.
+- It would be my recommendation to investigate and to find the reasoning behind the sales difference, to create a PIP.
 
-1. Slice. What your **slice** showed about that dimension
-2. Dice. What your **dice** revealed about the combination of dimensions
-3. Drilldown. What the **drilldown** exposed that the summary view missed
-4. Rollup. What the **rollup** revealed at a higher summary level
-5. Results. Any surprising or counterintuitive results
+### Final Thoughts
 
-### Summary
-
-Summarize your custom reporting work.
-
-Include specifics showcasing your analysis:
-
-- What you implemented beyond the example
-- What business insights your queries produced
-- What you learned about OLAP reporting
-- What kinds of real business decisions this analysis could support
+- This project was one of the more facinating, using Spark and PowerBI together gave a better inisght to real-world applications
+- Working in auding and compliance I can utilizing using these new skills within finding errors and implementing solutions.

@@ -6,7 +6,7 @@ OLAP stands for Online Analytical Processing.
 OLAP techniques help us examine business measures
 across different dimensions and levels of detail.
 
-Author: Denise Case
+Author: CJ Jade
 Date: 2026-07
 
 Process:
@@ -28,7 +28,7 @@ Output:
 
 Terminal command to run this file from the root project folder:
 
-uv run python -m bizintel.olap_case
+uv run python -m bizintel.olap_cjjade
 
 OBS:
   Don't edit this file - it should remain a working example.

@@ -21,47 +21,50 @@ to get the example projects running on your machine.
 
 ## Phase 4. Technical Modification
 
-Describe your small technical modification to the example project.
+The small technical modification I choose to make was creating a second chart that showed the West Sales.
 
-Include:
+I choose this modification, because I decided to use this project to center around the sales of the East and West for my custom project.
+Having this modification helped give a bigger picture of both the sales for East region and West region.
 
-- What you changed
-- Why you chose that change
-- How you verified that it worked
-- What result, output, chart, metric, or behavior confirmed the change
+This was veirfied both when the new chart generated, and I saw Exected Successfully on the project.log.
 
-Compared with the example project,
-explain what is different and why the change matters.
-
-Was it easy, or surprisingly challenging and why do you think so?
+This change was somewhere in between easy and moderate.
+Place it there because it did take me couple hours of reading, videos, and a failed attempt before I figured out I was making it harder then it needed to be.
 
 ## Phase 5. Custom Project
 
-Describe your custom OLAP reporting work.
+- The custom project I choose to do, was comparing the sales of the East and West Regions.
+- I used PowerBI along with using Spark to generate new reports and Charts.
 
-### Basis and Data
+### Data Basics
 
-Describe the data warehouse you queried.
+- The data I choose to investigate was the Sales of the East and West.
+- I invesigated monthly and annually sales, as well as the top and bottom 5.
 
-Include:
+## Data Question
 
-- The warehouse tables and what each contains
-- The business questions you chose to investigate
-- Why those questions matter to a business
+- The question I was trying to answer first, which region had the highest sales, and which had the lowest
+- The reasons this question matters is because it can help forecast future budget spending, promotions, and aid in trainings
 
-### OLAP Operations
+## Slice
 
-Describe the slice, dice, rollup, and drilldown operations you implemented.
+- I used Spark for the Slice, and for this one I choose to look at the sale for West Region.
 
-Include:
+![DuckDB OLAP Reporting Results](./docs/images/Figure_1.png)
 
-1. Slice. What dimension you chose for your **slice** and why
-2. Dice. What two dimensions you chose for your **dice** and why
-3. Drilldown. What level of **drilldown** you implemented and what it revealed
-4. Rollup. What level of **rollup** you implemented and what higher-level summary it produced
-5. OS. Your operating system
-6. Reporting Tool. Which reporting path you used: Power BI or Apache Spark
-7. Custom Reporting. What **custom operation** or **query** you added beyond the example
+## Dice
+
+- For the Dice I used PowerBI to analyze thr West and East regions for annual sales and sales in different categories.
+
+## Rollup
+
+- For the Rollup I started in PowerBI but ended up moving to Spark to look.
+- I first looked at quarterly sales, then moved to Spark and generated a report and chart of 2024 and 2025 sales.
+
+## Drilldown
+
+- For the Drilldown in PowerBI I ran a report the SalesYear for 2025.
+- Within my charts it revealed the top 5 and bottom 5 sales for 2025
 
 ### Findings
 

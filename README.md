@@ -163,8 +163,8 @@ git push -u origin main
 
 ## Custom Command
 
-- Image Figures 3, 4, & 5
-- SLice Report Chart of West
+- 8 new Image Figures
+- Slice, Dice, Rollup & Drilldown Report Chart of West & East
 
 ## Notes
 

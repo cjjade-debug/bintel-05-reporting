@@ -405,3 +405,64 @@
 2026-08-01 14:19:05 | INFO | BI | ========================
 2026-08-01 14:19:05 | INFO | BI | Executed successfully!
 2026-08-01 14:19:05 | INFO | BI | ========================
+2026-08-02 19:23:56 | INFO | BI | === RUN START ===
+2026-08-02 19:23:56 | INFO | BI | project=BI
+2026-08-02 19:23:56 | INFO | BI | repo_dir=bintel-05-reporting
+2026-08-02 19:23:56 | INFO | BI | python=3.14.6
+2026-08-02 19:23:56 | INFO | BI | os=Windows 11
+2026-08-02 19:23:56 | INFO | BI | shell=powershell
+2026-08-02 19:23:56 | INFO | BI | cwd=.
+2026-08-02 19:23:56 | INFO | BI | github_actions=False
+2026-08-02 19:23:56 | INFO | BI | ========================
+2026-08-02 19:23:56 | INFO | BI | START main()
+2026-08-02 19:23:56 | INFO | BI | ========================
+2026-08-02 19:23:56 | INFO | BI | Reporting data: = data\reporting\sales_reporting_case.csv
+2026-08-02 19:23:56 | INFO | BI | CALL a function to create a Spark session........
+2026-08-02 19:23:56 | INFO | BI | Creating Spark session
+2026-08-02 19:24:15 | INFO | BI |   Spark session created
+2026-08-02 19:24:15 | INFO | BI | CALL a function to load reporting data........
+2026-08-02 19:24:15 | INFO | BI | Loading reporting data
+2026-08-02 19:24:18 | INFO | BI |   Loaded 2392 rows
+2026-08-02 19:24:18 | INFO | BI | CALL a function to slice sales by region........
+2026-08-02 19:24:18 | INFO | BI | Spark OLAP slice: East
+2026-08-02 19:24:18 | INFO | BI | SHOW the slice result........
+2026-08-02 19:24:19 | INFO | BI | CALL a function to plot the slice result........
+2026-08-02 19:24:19 | INFO | BI | Creating chart: Sales by Category in East
+2026-08-02 19:24:20 | INFO | BI | CALL a function to dice sales by region and category........
+2026-08-02 19:24:20 | INFO | BI | Spark OLAP dice: region and category
+2026-08-02 19:24:20 | INFO | BI | SHOW the dice result........
+2026-08-02 19:24:20 | INFO | BI | CALL a function to plot the dice result........
+2026-08-02 19:24:20 | INFO | BI | Creating chart: Selected Region and Category Sales
+2026-08-02 19:24:21 | INFO | BI | CALL a function to roll up yearly sales........
+2026-08-02 19:24:21 | INFO | BI | Spark OLAP rollup: yearly sales
+2026-08-02 19:24:21 | INFO | BI | SHOW the rollup result........
+2026-08-02 19:24:21 | INFO | BI | CALL a function to plot yearly sales........
+2026-08-02 19:24:21 | INFO | BI | Creating chart: Yearly Sales Rollup
+2026-08-02 19:24:21 | INFO | BI | Selected year for drilldown: 2025
+2026-08-02 19:24:21 | INFO | BI | CALL a function to drill down to monthly sales........
+2026-08-02 19:24:21 | INFO | BI | Spark OLAP drilldown: monthly sales for 2025
+2026-08-02 19:24:21 | INFO | BI | SHOW the drilldown result........
+2026-08-02 19:24:22 | INFO | BI | CALL a function to plot monthly sales........
+2026-08-02 19:24:22 | INFO | BI | Creating chart: Monthly Sales Drilldown for 2025
+2026-08-02 19:24:22 | INFO | BI | CALL a function to summarize findings........
+2026-08-02 19:24:22 | INFO | BI | ========================
+2026-08-02 19:24:22 | INFO | BI | SPARK SUMMARY
+2026-08-02 19:24:22 | INFO | BI | ========================
+2026-08-02 19:24:22 | INFO | BI | Slice: In East, the leading category is Office ($456,342.94)
+2026-08-02 19:24:22 | INFO | BI | Dice: The strongest selected combination is East / Electronics ($218,291.81)
+2026-08-02 19:24:22 | INFO | BI | Rollup: The strongest year is 2024 ($2,247,582.90)
+2026-08-02 19:24:22 | INFO | BI | Drilldown: The strongest month in 2025 is 2025-05-01 00:00:00 ($369,056.60)
+2026-08-02 19:24:22 | INFO | BI | ========================
+2026-08-02 19:24:22 | INFO | BI | ANALYST NOTES:
+2026-08-02 19:24:22 | INFO | BI | Slice focuses on one dimension value.
+2026-08-02 19:24:22 | INFO | BI | Dice filters multiple dimensions.
+2026-08-02 19:24:22 | INFO | BI | Rollup creates a higher-level summary.
+2026-08-02 19:24:22 | INFO | BI | Drilldown reveals more detailed results.
+2026-08-02 19:24:22 | INFO | BI | ========================
+2026-08-02 19:24:22 | INFO | BI | CALL a function to show charts........
+2026-08-02 19:28:36 | INFO | BI | Spark workflow complete
+2026-08-02 19:28:36 | INFO | BI | CLOSE chart windows to continue.
+2026-08-02 19:28:36 | INFO | BI | Terminate this process with CTRL+c as needed.
+2026-08-02 19:28:36 | INFO | BI | ========================
+2026-08-02 19:28:36 | INFO | BI | Executed successfully!
+2026-08-02 19:28:36 | INFO | BI | ========================

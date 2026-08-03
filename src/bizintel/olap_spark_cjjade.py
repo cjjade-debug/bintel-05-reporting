@@ -15,8 +15,8 @@ used in the DuckDB reporting example:
 
 Run olap_case.py first to create the reporting-ready CSV file.
 
-Author: Denise Case
-Date: 2026-06
+Author: CJ Jade
+Date: 2026-07
 
 Process:
     - Start a local Spark session.
@@ -569,3 +569,92 @@ if __name__ == "__main__":
     # This conditional ensures that the main() function is only executed
     # when this script is run directly, not when it is imported as a module.
     main()
+
+
+def plot_top_bottom_sales(
+    df_reporting: DataFrame,
+    group_by_cols: list[str] | str = ["Region", "Category"],  # noqa: B006
+    top_n: int = 5,
+) -> None:
+    """Aggregate sales and plot top N and bottom N groups.
+
+    Args:
+        df_reporting: Spark DataFrame with at least the grouping columns and SaleAmount.
+        group_by_cols: Column name or list of column names to aggregate by.
+        top_n: Number of top / bottom groups to show.
+
+    Returns:
+        None (creates matplotlib charts; don't call plt.show() here so caller can control display).
+    """
+    LOG.info("Preparing top/bottom sales chart")
+
+    # Normalize group_by_cols to a list
+    if isinstance(group_by_cols, str):
+        cols = [group_by_cols]
+    else:
+        cols = list(group_by_cols)
+
+    # Aggregate in Spark
+    df_agg: DataFrame = df_reporting.groupBy(*cols).agg(
+        F.round(F.sum("SaleAmount"), 2).alias("TotalSales")
+    )
+
+    # Build a readable label column (e.g., "East / Electronics")
+    if len(cols) == 1:
+        label_col = cols[0]
+        df_labeled = df_agg.withColumn("Label", F.col(label_col).cast("string"))
+    else:
+        df_labeled = df_agg.withColumn(
+            "Label", F.concat_ws(" / ", *[F.col(c).cast("string") for c in cols])
+        )
+
+    # Convert to pandas (aggregated result is small)
+    df_pd = (
+        df_labeled.select("Label", "TotalSales")
+        .orderBy(F.desc("TotalSales"))
+        .toPandas()
+    )
+
+    # Ensure numeric and handle missing
+    df_pd["TotalSales"] = pd.to_numeric(df_pd["TotalSales"], errors="coerce").fillna(
+        0.0
+    )
+
+    # If there are fewer rows than requested, adjust top_n
+    n_available = len(df_pd)
+    if n_available == 0:
+        LOG.warning("No groups found to plot.")
+        return
+
+    n_show = min(top_n, max(1, n_available))
+
+    # Select top N and bottom N
+    df_top = df_pd.nlargest(n_show, "TotalSales").copy()
+    df_bottom = df_pd.nsmallest(n_show, "TotalSales").copy()
+
+    # Sort for horizontal bar aesthetics (small->large so bars grow left->right)
+    df_top_sorted = df_top.sort_values("TotalSales", ascending=True)
+    df_bottom_sorted = df_bottom.sort_values("TotalSales", ascending=True)
+
+    # Plot side-by-side horizontal bar charts
+    fig, axes = plt.subplots(1, 2, figsize=(14, 6), constrained_layout=True)
+
+    # Top N (left)
+    axes[0].barh(df_top_sorted["Label"], df_top_sorted["TotalSales"], color="tab:green")
+    axes[0].set_title(f"Top {n_show} groups by Sales")
+    axes[0].set_xlabel("Total Sales ($)")
+    axes[0].tick_params(axis="y", labelsize=9)
+
+    # Bottom N (right)
+    axes[1].barh(
+        df_bottom_sorted["Label"], df_bottom_sorted["TotalSales"], color="tab:red"
+    )
+    axes[1].set_title(f"Bottom {n_show} groups by Sales")
+    axes[1].set_xlabel("Total Sales ($)")
+    axes[1].tick_params(axis="y", labelsize=9)
+
+    # If group labels are long, rotate x ticks a bit (horizontal bars so x ticks not usually a problem)
+    for ax in axes:
+        ax.grid(axis="x", linestyle="--", alpha=0.4)
+
+    LOG.info("Top/bottom sales charts prepared (call plt.show() in caller to display).")

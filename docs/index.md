@@ -68,13 +68,16 @@ Place it there because it did take me couple hours of reading, videos, and a fai
 
 ![Spark Rollup](./images/Figure_3.png)
 ![Spark Rollup](./images/Figure_7.png)
+![Spark Rollup](./images/Figure_6.png)
 
 ## Drilldown
 
 - For the Drilldown in PowerBI I ran a report the SalesYear for 2025.
 - Within my charts it revealed the top 5 and bottom 5 sales for 2025
 
-![Spark Drilldown](./images/Figure_7.png)
+![Spark Drilldown](./images/Figure_4.png)
+![PowerBI Drilldown](./images/Figure_8.png)
+![PowerBI Drilldown](./images/Figure_9.png)
 
 ### Findings
 
@@ -98,5 +101,3 @@ Include specifics showcasing your analysis:
 - What business insights your queries produced
 - What you learned about OLAP reporting
 - What kinds of real business decisions this analysis could support
-
-Display charts, visuals, screenshots showcasing your OLAP results.

@@ -50,7 +50,8 @@ Place it there because it did take me couple hours of reading, videos, and a fai
 
 - I used Spark for the Slice, and for this one I choose to look at the sale for West Region.
 
-![DuckDB OLAP Reporting Results](./docs/images/Figure_1.png)
+![DuckDB OLAP Reporting Results](./images/Figure_1.png)
+![DuckDB OLAP Reporting Results](./images/Figure_5.png)
 
 ## Dice
 

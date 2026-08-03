@@ -55,7 +55,11 @@ Place it there because it did take me couple hours of reading, videos, and a fai
 
 ## Dice
 
-- For the Dice I used PowerBI to analyze thr West and East regions for annual sales and sales in different categories.
+- For the Dice I used PowerBI to analyze the West and East regions for annual sales and sales in different categories.
+
+![Spark OLAP Analysis](./images/Figure_2.png)
+![Power BI OLAP Analysis](./images/Figure_10.png)
+![Power BI Spark OLAP Analysis](./images/Figure_11.png)
 
 ## Rollup
 
